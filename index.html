@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shilpa Therthala Veed | ABA Therapist and Registered Social Worker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1f3d; --muted:#4a5878; --paper:#f4f7fc; --panel:#ffffff; --line:#d3ddf0;
+  --teal:#1457d6; --teal-soft:#e2ebff; --gold:#d98a00;
+  --aqua:#00a99d; --amber:#f59e0b;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#eaf0ff; --muted:#a7b5d6; --paper:#0a1330; --panel:#101d44; --line:#25376b;
+    --teal:#6aa2ff; --teal-soft:#16295a; --gold:#ffc247; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#eaf0ff; --muted:#a7b5d6; --paper:#0a1330; --panel:#101d44; --line:#25376b;
+  --teal:#6aa2ff; --teal-soft:#16295a; --gold:#ffc247; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:1.0625rem;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--teal);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header.top{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between;align-items:center;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+header.top .brand{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:1.1rem}
+nav a{margin-right:1.25rem;font-weight:500;font-size:.95rem;text-decoration:none;color:var(--ink)}
+nav a:hover{color:var(--teal);text-decoration:underline}
+
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:2.5rem;padding:3.5rem 0 3rem;align-items:start}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:700;letter-spacing:-.02em}
+.hero .role{margin:.9rem 0 0;font-size:1.2rem;color:var(--teal);font-weight:600}
+.hero .lead{margin:1.5rem 0 0;font-size:1.25rem;max-width:34rem}
+.hero .actions{margin-top:1.75rem;display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--teal)}
+.btn.primary{background:var(--teal);color:var(--paper)}
+.btn.ghost{color:var(--teal)}
+.btn:hover{filter:brightness(1.08)}
+
+.glance{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--teal);border-radius:4px;padding:1.5rem}
+.glance h2{font-size:1.15rem;margin-bottom:1rem}
+.glance dl{margin:0}
+.glance dt{font-weight:600;font-size:.9rem;color:var(--muted);margin-top:.9rem}
+.glance dt:first-child{margin-top:0}
+.glance dd{margin:.1rem 0 0}
+
+section.block{padding:3rem 0;border-top:1px solid var(--line)}
+section.block>h2,.wrap>section>h2{font-size:clamp(1.6rem,3.5vw,2.1rem);margin-bottom:1.5rem}
+
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.skills h3{font-size:1.1rem;margin-bottom:.6rem;color:var(--teal)}
+.skills ul{margin:0;padding-left:1.1rem}
+.skills li{margin-bottom:.4rem}
+
+.timeline{position:relative;margin:0;padding:0;list-style:none}
+.timeline::before{content:"";position:absolute;left:.55rem;top:.4rem;bottom:.4rem;width:3px;background:var(--line);border-radius:2px}
+.job{position:relative;padding:0 0 2.25rem 2.5rem}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:0;top:.45rem;width:1.15rem;height:1.15rem;border-radius:50%;background:var(--paper);border:3px solid var(--teal)}
+.job.now::before{background:var(--teal)}
+.job h3{font-size:1.25rem}
+.job .where{margin:.2rem 0 0;color:var(--muted)}
+.job .when{display:inline-block;margin:.5rem 0 .6rem;padding:.1rem .6rem;background:var(--teal-soft);border-radius:999px;font-size:.85rem;font-weight:600}
+.job ul{margin:0;padding-left:1.1rem;max-width:44rem}
+.job li{margin-bottom:.35rem}
+
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem 2.5rem}
+.edu h3{font-size:1.1rem}
+.edu p{margin:.15rem 0 0;color:var(--muted)}
+.creds{margin-top:2rem;padding:1.25rem 1.5rem;background:var(--panel);border:1px solid var(--line);border-radius:4px}
+.creds p{margin:0}
+
+.contact p{max-width:36rem;margin:0 0 1.25rem}
+footer{padding:2rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+.band{background:linear-gradient(120deg,#0b1f4d 0%,#123a9c 58%,#1457d6 100%);color:#fff}
+.band header.top{border-bottom:1px solid rgba(255,255,255,.22)}
+.band header.top .brand,.band nav a{color:#fff}
+.band nav a:hover{color:#ffc247}
+.band .hero h1{color:#fff}
+.band .hero .role{color:#ffc247}
+.band .hero .lead{color:#e6edff}
+.band a:focus-visible{outline-color:#ffc247}
+.band .btn.primary{background:#ffb627;border-color:#ffb627;color:#0b1f4d}
+.band .btn.ghost{border-color:#fff;color:#fff}
+.glance{border-left-color:var(--amber);box-shadow:0 12px 30px rgba(8,20,60,.35)}
+.skills>div{padding-top:1rem;border-top:5px solid var(--teal)}
+.skills>div:nth-child(2){border-top-color:var(--aqua)}
+.skills>div:nth-child(3){border-top-color:var(--amber)}
+.timeline::before{background:linear-gradient(var(--teal),var(--aqua))}
+.job.now::before{background:var(--amber);border-color:var(--amber)}
+.job .when{background:var(--teal);color:var(--paper)}
+.edu>div{padding-left:1rem;border-left:5px solid var(--teal)}
+.edu>div:nth-child(2){border-left-color:var(--aqua)}
+.edu>div:nth-child(3){border-left-color:var(--amber)}
+.edu>div:nth-child(4){border-left-color:#e0457b}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding:2.25rem 0 2rem;gap:2rem}
+  .skills,.edu{grid-template-columns:1fr}
+  section.block{padding:2.25rem 0}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="band"><div class="wrap">
+  <header class="top">
+    <div class="brand">Shilpa Therthala Veed</div>
+    <nav aria-label="Page sections">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <h1 id="name">Shilpa Therthala Veed</h1>
+        <p class="role">ABA Therapist and Registered Social Worker (OCSWSSW)</p>
+        <p class="lead">I help children and youth with autism and developmental disabilities build new skills, and I help their families carry those skills into everyday life.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:shilpatvhere@gmail.com">Email me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/shilpatvhere">View LinkedIn</a>
+        </div>
+      </div>
+      <aside class="glance" aria-label="At a glance">
+        <h2>At a glance</h2>
+        <dl>
+          <dt>Current role</dt><dd>TRE-ADD Program Therapist, Surrey Place</dd>
+          <dt>Works with</dt><dd>Children and youth aged 6 to 18 with complex behavioural, communication and learning needs</dd>
+          <dt>School-based ABA</dt><dd>Nearly two years, Durham Catholic District School Board</dd>
+          <dt>Safety training</dt><dd>Safe Management Group crisis intervention; CPR, AED and First Aid</dd>
+          <dt>Languages</dt><dd>English, Malayalam, Hindi</dd>
+          <dt>Based in</dt><dd>Scarborough, Ontario</dd>
+        </dl>
+      </aside>
+    </section>
+  </div></div>
+  <div class="wrap"><main>
+
+    <section class="block" id="about" aria-labelledby="about-h">
+      <h2 id="about-h">What I do</h2>
+      <div class="skills">
+        <div>
+          <h3>Teaching skills</h3>
+          <ul>
+            <li>One-to-one ABA programs and safety plans</li>
+            <li>Positive reinforcement, prompting, shaping, chaining and modeling</li>
+            <li>Communication, emotional regulation, social and daily living skills</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tracking progress</h3>
+          <ul>
+            <li>Continuous behavioural data collection</li>
+            <li>Individual Support and Person-Directed Plans</li>
+            <li>Clear records, reports and incident documentation</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Working with others</h3>
+          <ul>
+            <li>Crisis response and de-escalation</li>
+            <li>Regular updates for families, teachers and health care providers</li>
+            <li>Teamwork under clinical supervision</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <ol class="timeline">
+        <li class="job now">
+          <h3>TRE-ADD Program Therapist</h3>
+          <p class="where">Surrey Place, Toronto</p>
+          <span class="when">Oct 2026 to present</span>
+          <ul>
+            <li>Deliver one-to-one behaviour programs, safety plans and skill-building goals for children and youth with autism or developmental disabilities.</li>
+            <li>Respond to crisis situations using approved de-escalation and safety protocols.</li>
+            <li>Record continuous behavioural data to track progress and adjust interventions.</li>
+            <li>Work in Education Community Partnership Program classrooms, in partnership with school boards, under the guidance of Supervising Therapists and Clinical Supervisors.</li>
+          </ul>
+        </li>
+        <li class="job now">
+          <h3>Supply Educational Assistant</h3>
+          <p class="where">Durham Catholic District School Board, Oshawa</p>
+          <span class="when">Dec 2024 to present</span>
+          <ul>
+            <li>Provide one-on-one ABA support to students with disabilities in classrooms, using individualized treatment plans.</li>
+            <li>Keep accurate data on student progress and behaviour, and work with teachers and specialists.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <h3>Skill Development Associate</h3>
+          <p class="where">Community Living Toronto</p>
+          <span class="when">Dec 2025 to Oct 2026</span>
+          <ul>
+            <li>Tracked each client’s progress against Individual Support Plan goals.</li>
+            <li>Responded to behavioural crises using Safe Management Group training.</li>
+            <li>Guided volunteers and junior staff, and shared updates with supervisors and health care providers.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <h3>Behaviour Support Associate</h3>
+          <p class="where">Community Living Toronto</p>
+          <span class="when">Jun 2024 to Nov 2025</span>
+          <ul>
+            <li>Supported four adults with autism and complex behavioural needs using ABA programming.</li>
+            <li>Developed Person-Directed Plans and delivered life-skills, daily living and communication programs.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <h3>Personal Support Worker</h3>
+          <p class="where">Glen Hill Terrace, Oshawa</p>
+          <span class="when">Apr 2025 to Aug 2025</span>
+          <ul>
+            <li>Assisted residents with daily living and followed care plans and infection-prevention protocols.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <h3>Psychiatric Social Worker</h3>
+          <p class="where">Thanal, Vadakara, India</p>
+          <span class="when">Mar 2022 to Nov 2022</span>
+          <ul>
+            <li>Provided geriatric care, monitored health changes and responded to emergencies with CPR and First Aid.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <h3>Social Worker</h3>
+          <p class="where">Chaitanya Institute for Mental Health, Pune, India</p>
+          <span class="when">Nov 2020 to Nov 2021</span>
+          <ul>
+            <li>Ran psychosocial assessments and led individual and group therapy, including counselling, art therapy and family therapy.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="block" id="education" aria-labelledby="edu-h">
+      <h2 id="edu-h">Education and credentials</h2>
+      <div class="edu">
+        <div><h3>Autism and Behavioural Science Certificate</h3><p>Durham College, 2024</p></div>
+        <div><h3>Personal Support Worker Certificate</h3><p>Durham College, 2025</p></div>
+        <div><h3>Master of Social Work</h3><p>Sree Sankaracharya University of Sanskrit, Kerala, 2018 to 2020</p></div>
+        <div><h3>Bachelor of Social Work</h3><p>Kannur University, Kerala, 2015 to 2018</p></div>
+      </div>
+      <div class="creds"><p>Registered Social Worker (OCSWSSW). Safe Management Group crisis intervention training. CPR, AED and First Aid certified.</p></div>
+    </section>
+
+    <section class="block contact" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Get in touch</h2>
+      <p>I’m glad to talk about ABA support for children, youth and families. The best way to reach me is by email or LinkedIn.</p>
+      <div class="actions" style="display:flex;flex-wrap:wrap;gap:.75rem">
+        <a class="btn primary" href="mailto:shilpatvhere@gmail.com">shilpatvhere@gmail.com</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/shilpatvhere">linkedin.com/in/shilpatvhere</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Shilpa Therthala Veed. Scarborough, Ontario.</footer>
+</div>
+</body>
+</html>
